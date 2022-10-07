@@ -6,26 +6,20 @@ import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
 
-const App = () => {
-  return (
-    <div>
+function App() {
+  return <div>
+     
       <NavBar />
       <Switch>
-        <Route path="/movies">
-          <Movies />
-        </Route>
-        <Route path="/directors">
-          <Directors />
-        </Route>
-        <Route path="/actors">
-          <Actors />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/" exact><Home /></Route>
+        <Route path="/movies"><Movies /></Route>
+        <Route path="/directors"><Directors /></Route>
+        <Route path="/actors"><Actors /></Route>
+       
       </Switch>
-    </div>
-  );
-};
+
+  
+  </div>;
+}
 
 export default App;
